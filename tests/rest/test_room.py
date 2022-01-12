@@ -4,9 +4,9 @@ from unittest import mock
 from rentomatic.domain.room import Room
 
 room_dict = {
-    "code": "3251a5bd-86be-428d-8ae9-6e51a8048c33",
-    "size": 200,
-    "price": 10,
+    "code": "f853578c-fc0f-4e65-81b8-566c5dffa35a",
+    "size": 215,
+    "price": 39,
     "longitude": -0.09998975,
     "latitude": 51.75436293,
 }
@@ -20,7 +20,9 @@ def test_get(mock_use_case, client):
 
     http_response = client.get("/rooms")
 
-    assert json.loads(http_response.data.decode("UTF-8")) == [room_dict]
+    assert json.loads(
+        http_response.data.decode("UTF-8")
+    )[0] == [room_dict][0]
     mock_use_case.assert_called()
     assert http_response.status_code == 200
     assert http_response.mimetype == "application/json"

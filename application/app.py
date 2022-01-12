@@ -1,6 +1,6 @@
 from flask import Flask
 
-from rentomatic.application.rest import room
+from application.rest import room
 
 
 def create_app(config_name):

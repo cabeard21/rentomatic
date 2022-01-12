@@ -1,6 +1,6 @@
 import pytest
 
-from rentomatic.application.app import create_app
+from application.app import create_app
 
 
 @pytest.fixture
