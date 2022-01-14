@@ -7,7 +7,8 @@
     "python.testing.unittestEnabled": false,
     "python.testing.pytestEnabled": true,
     "python.testing.pytestArgs": [
-        "-vss"
+        "-c",
+        "/workspaces/rentomatic/pytest.ini"
     ],
     "python.analysis.extraPaths": [
         "/workspaces/rentomatic/"
